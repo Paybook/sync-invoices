@@ -1,0 +1,119 @@
+{
+    "Version": "3.3",
+    "Serie": "",
+    "Folio": "",
+    "Fecha": "",
+    "FormaPago": "",
+    "CondicionesDePago": "",
+    "SubTotal": "",
+    "Descuento": "",
+    "Moneda": "",
+    "TipoCambio": "",
+    "Total": "",
+    "TipoDeComprobante": "",
+    "MetodoPago": "",
+    "LugarExpedicion": "",
+    "CfdiRelacionados" : {
+        "TipoRelacion": "",
+        "CfdiRelacionado": [{
+            "CfdiRelacionado": {
+                "UUID": ""
+            }
+        }]
+    },
+    "Emisor": {
+        "Rfc": "",
+        "Nombre": "",
+        "RegimenFiscal": ""
+    },
+    "Receptor": {
+        "Rfc": "",
+        "Nombre": "",
+        "ResidenciaFiscal": "",
+        "NumRegIdTrib": "",
+        "UsoCFDI": ""
+    },
+    "Conceptos": [{
+        "Concepto" : {
+            "ClaveProdServ": "01010101",
+            "NoIdentificacion": "",
+            "Cantidad": "",
+            "ClaveUnidad": "",
+            "Unidad": "",
+            "Descripcion": "",
+            "ValorUnitario": "",
+            "Importe": "",
+            "Descuento": "",
+            "Impuestos": {
+                "Traslados": {
+                    "Traslado": [{
+                        "Traslado": {
+                            "Base": "",
+                            "Impuesto": "",
+                            "TipoFactor": "",
+                            "TasaOCuota": "",
+                            "Importe": ""
+                        }
+                    }]
+                },
+                "Retenciones": {
+                    "Retencion": [{
+                        "Retencion": {
+                            "Base": "",
+                            "Impuesto": "",
+                            "TipoFactor": "",
+                            "TasaOCuota": "",
+                            "Importe": ""
+                        }
+                    }]
+                }
+            },
+            "InformacionAduanera": {
+                "NumeroPedimento": ""
+            },
+            "CuentaPredial": {
+                "Numero": ""
+            },
+            "ComplementoConcepto" : {
+                "Parte": [{
+                    "Parte": {
+                        "ClaveProdServ": "",
+                        "NoIdentificacion": "",
+                        "Cantidad": "",
+                        "Unidad": "",
+                        "Descripcion": "",
+                        "ValorUnitario": "",
+                        "Importe": "",
+                        "InformacionAduanera": {
+                            "NumeroPedimento": ""
+                        }
+                    }
+                }]                
+            }
+
+        }
+    }],
+    "Impuestos": {
+        "TotalImpuestosRetenidos": "",
+        "TotalImpuestosTrasladados": "",
+        "Retenciones": {
+            "Retencion": [{
+                "Retencion": {
+                    "Impuesto": "",
+                    "Importe": ""
+                }
+            }]
+        },
+        "Traslados": {
+            "Traslado": [{
+                "Traslado": {                    
+                    "Impuesto": "",
+                    "TipoFactor": "",
+                    "TasaOCuota": "",
+                    "Importe": ""
+                }
+            }]
+        }    
+    },
+    "complemento": {}
+}

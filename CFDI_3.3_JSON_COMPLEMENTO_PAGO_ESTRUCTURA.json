@@ -1,0 +1,82 @@
+{
+    "Version": "3.3",
+    "Serie": "",
+    "Folio": "",
+    "Fecha": "",
+    "SubTotal": "0", 
+    "Moneda": "XXX",
+    "Total": "0",
+    "TipoDeComprobante": "P",
+    "LugarExpedicion": "",
+    "Confirmacion" : "", 
+    "CfdiRelacionados" : {
+        "TipoRelacion": "",
+        "CfdiRelacionado": [{
+            "CfdiRelacionado": {
+                "UUID": ""
+            }
+        }]
+    },
+    "Emisor": {
+        "Rfc": "",
+        "Nombre": "",
+        "RegimenFiscal": ""
+    },
+    "Receptor": {
+        "Rfc": "",
+        "Nombre": "",
+        "ResidenciaFiscal": "", 
+        "NumRegIdTrib": "", 
+        "UsoCFDI": "" 
+    },
+    "Conceptos": {
+        "Conepto" : [{
+            "Concepto" : {
+                "ClaveProdServ": "84111506",
+                "Cantidad": "1",
+                "ClaveUnidad": "ACT",   
+                "Descripcion": "Pago",
+                "ValorUnitario": "0 ",
+                "Importe": "0"
+            }
+        }]
+    },
+    "Complemento": {
+        "Pagos" : {
+            "Version": "1.0",
+            "Pago" : [{
+                "Pago" : {
+                    "FechaPago" : "",
+                    "FormaDePagoP" : "",
+                    "MonedaP" : "",
+                    "TipoCambioP" : "", 
+                    "Monto" : "",
+                    "NumOperacion" : "",
+                    "RfcEmisorCtaOrd" : "",
+                    "NomBancoOrdExt" : "",
+                    "CtaOrdenante" : "",
+                    "RfcEmisorCtaBen" : "",
+                    "CtaBeneficiario" : "",
+                    "TipoCadPago" : "",
+                    "CertPago": "",
+                    "CadPago" : "",
+                    "SelloPago" : "",
+                    "DoctoRelacionado" : [{
+                        "DoctoRelacionado": {
+                            "IdDocumento" : "",
+                            "Serie" : "",
+                            "Folio" : "",
+                            "MonedaDR" : "",
+                            "TipoCambioDR" : "", 
+                            "MetodoDePagoDR" : "",
+                            "NumParcialidad" : "",
+                            "ImpSaldoAnt" : "",
+                            "ImpPagado" : "",
+                            "ImpSaldoInsoluto" : ""
+                        }
+                    }]
+                }
+            }]
+        }
+    }
+}

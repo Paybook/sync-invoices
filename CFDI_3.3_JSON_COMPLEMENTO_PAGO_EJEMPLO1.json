@@ -1,0 +1,71 @@
+{
+    "Version": "3.3",
+    "Serie": "A",
+    "Folio": "23205",
+    "Fecha": "2017-11-12T15:47:02",
+    "SubTotal": "0", //Siempre debe ser cero
+    "Moneda": "XXX", //Siempre debe ser XXX
+    "Total": "0", //Siempre debe ser cero
+    "TipoDeComprobante": "P", //Siempre debe ser P
+    "LugarExpedicion": "09310",
+    "CfdiRelacionados" : {
+        "TipoRelacion": "04",
+        "CfdiRelacionado": [{
+            "CfdiRelacionado": {
+                "UUID": "560a8451-a29c-41d4-a716-544676554400"
+            }
+        }]
+    },
+    "Emisor": {
+        "Rfc": "GOYA780416GM0",
+        "Nombre": "Orlando Gutierrez",
+        "RegimenFiscal": "612"
+    },
+    "Receptor": {
+        "Rfc": "XAXX010101000",
+        "Nombre": "Juan Perez",
+        "UsoCFDI": "P01"
+    },
+    "Conceptos": {
+        "Concepto" : [{
+            "Concepto" : {
+                "ClaveProdServ": "84111506",
+                "Cantidad": "1",
+                "ClaveUnidad": "ACT",   
+                "Descripcion": "Pago",
+                "ValorUnitario": "0",
+                "Importe": "0"
+            }
+        }]
+    },
+    "Complemento": {
+        "Pagos" : {
+            "Version": "1.0",
+            "Pago" : [{
+                "Pago" : {
+                    "FechaPago" : "2017-11-07T10:10:09",
+                    "FormaDePagoP" : "03",
+                    "MonedaP" : "MXN",
+                    "Monto" : "14500.00",
+                    "NumOperacion" : "4343434",
+                    "CtaOrdenante" : "123456789101112131",
+                    "RfcEmisorCtaBen" : "MES420823153",
+                    "CtaBeneficiario" : "123456789101114558",
+                    "DoctoRelacionado" : [{
+                        "DoctoRelacionado": {
+                            "IdDocumento" : "31FBF471-DCFD-46A5-B235-CADD520A9CC0",
+                            "Serie" : "A32",
+                            "Folio" : "1337",
+                            "MonedaDR" : "MXN",
+                            "MetodoDePagoDR" : "PPD",
+                            "NumParcialidad" : "8",
+                            "ImpSaldoAnt" : "10000.00",
+                            "ImpPagado" : "3000.00",
+                            "ImpSaldoInsoluto" : "7000.00"
+                        }
+                    }]
+                }
+            }]
+        }
+    }
+}

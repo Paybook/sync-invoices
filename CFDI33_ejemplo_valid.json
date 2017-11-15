@@ -1,0 +1,115 @@
+
+{
+"api_key" : "{{sync_api_key}}",
+"id_user" : "{{sync_id_user}}",
+"id_provider":"acme",
+"invoice_data": {
+			"Version": "3.3",
+			"Serie": "A",
+			"Folio": "36",
+			"Fecha": "2017-07-19T19:09:14",
+			"FormaPago": "99",
+			"CondicionesDePago":"3 meses",
+			"SubTotal": "50",
+			"Descuento": "0",
+			"Moneda":"MXN",
+			"Total":"58",
+			"TipoDeComprobante": "I",
+			"MetodoPago":"PUE",
+			"LugarExpedicion": "05000",
+			"CfdiRelacionados" : {
+			        "TipoRelacion": "01",
+			        "CfdiRelacionado": [
+			        	{
+			            	"CfdiRelacionado": {
+			                "UUID": "560a8451-a29c-41d4-a716-544676554400"
+			           	 	}
+			           	}, 
+			           	{
+			            	"CfdiRelacionado": {
+			                "UUID": "560a8451-a29c-41d4-a716-544676554400"
+			           	 	}
+			           	}
+					]
+			},
+			"Emisor": {
+				"Rfc": 	"AAA010101AAA",
+				"Nombre": "Manuel Alejandro",
+				"RegimenFiscal": "601"
+			},
+
+			"Receptor":{
+				"Rfc": "XAXX010101000",
+				"Nombre":"Pedro Perez Hernandez",
+				"UsoCFDI": "D01"
+			},
+			"Conceptos" : {
+				"Concepto" : [
+							{
+								"Concepto" : {
+						            "ClaveProdServ": "01010101",
+						            "NoIdentificacion": "UT421510 ",
+						            "Cantidad": "1",
+						            "ClaveUnidad": "H87",
+						            "Unidad": "PZA",
+						            "Descripcion": "ARTICULO",
+						            "ValorUnitario": "50",
+						            "Importe": "50",
+						            "Descuento": "0",
+						            "Impuestos": {
+						                "Retenciones": {
+						                    "Retencion": [{
+						                        "Retencion": {
+						                            "Base": "50",
+						                            "Impuesto": "002",
+						                            "TipoFactor": "Tasa",
+						                            "TasaOCuota": "0.160000",
+						                            "Importe": "8"
+						                        }
+						                    }]
+						                }
+						            },
+						            "InformacionAduanera": {
+						                "NumeroPedimento": "15  48  3009  0001234"
+						            },
+						            "CuentaPredial": {
+						                "Numero": "112212"
+						            },
+						            "ComplementoConcepto" : {},
+						            "Parte": [{
+					                    "Parte": {
+					                        "ClaveProdServ": "41116401",
+					                        "NoIdentificacion": "3nn",
+					                        "Cantidad": "1",
+					                        "Unidad": "Piezas",
+					                        "Descripcion": "Martillo",
+					                        "ValorUnitario": "8",
+					                        "Importe": "8",
+						                    "InformacionAduanera": {
+						                        "NumeroPedimento": "15  48  3009  0001234"
+						                    }
+					                    }
+					                }]
+						        }
+						    }
+				]
+			},
+		    "Impuestos": {
+		        "TotalImpuestosRetenidos": "0",
+		        "TotalImpuestosTrasladados": "8",
+		        "Traslados": {
+		            "Traslado": [
+		            	{
+			                "Traslado": {
+			                    "Impuesto": "002",
+			                	"TipoFactor": "Tasa",
+	                    		"TasaOCuota": "0.160000",
+			                    "Importe": "8"
+			                }
+			            }
+		        	]
+		        }    
+		    }
+}
+   
+}
