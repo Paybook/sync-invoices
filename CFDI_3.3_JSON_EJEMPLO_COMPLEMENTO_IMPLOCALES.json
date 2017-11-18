@@ -1,0 +1,95 @@
+{
+      "Version": "3.3",
+      "Serie": "A",
+      "Folio": "36",
+      "Fecha": "2017-11-17T00:13:30",
+      "FormaPago": "99",
+      "CondicionesDePago":"3 meses",
+      "SubTotal": "50",
+      "Descuento": "0",
+      "Moneda":"MXN",
+      "Total":"58",
+      "TipoDeComprobante": "I",
+      "MetodoPago":"PUE",
+      "LugarExpedicion": "05000",
+      "Emisor": {
+        "Rfc":   "GOYA780416GM0",
+        "Nombre": "MIGUEL ANGEL BAUTISTA MATEO",
+        "RegimenFiscal": "621"
+      },
+
+      "Receptor":{
+        "Rfc": "XAXX010101000",
+        "Nombre":"Pedro Perez Hernandez",
+        "UsoCFDI": "D01"
+      },
+      "Conceptos" : {
+        "Concepto" : [
+              {
+                "Concepto" : {
+                        "ClaveProdServ": "01010101",
+                        "NoIdentificacion": "UT421510 ",
+                        "Cantidad": "1",
+                        "ClaveUnidad": "H87",
+                        "Unidad": "PZA",
+                        "Descripcion": "ARTICULO",
+                        "ValorUnitario": "50",
+                        "Importe": "50",
+                        "Descuento": "0",
+                        "Impuestos": {
+                            "Retenciones": {
+                                "Retencion": [{
+                                    "Retencion": {
+                                        "Base": "50",
+                                        "Impuesto": "002",
+                                        "TipoFactor": "Tasa",
+                                        "TasaOCuota": "0.160000",
+                                        "Importe": "8"
+                                    }
+                                }]
+                            }
+                        }
+                    }
+                }
+        ]
+      },
+        "Impuestos": {
+            "TotalImpuestosRetenidos": "0",
+            "TotalImpuestosTrasladados": "8",
+            "Traslados": {
+                "Traslado": [
+                  {
+                      "Traslado": {
+                          "Impuesto": "002",
+                        "TipoFactor": "Tasa",
+                          "TasaOCuota": "0.160000",
+                          "Importe": "8"
+                      }
+                  }
+              ]
+            }    
+        },
+        "Complemento": {
+            "ImpuestosLocales": {
+                "version" : "1.0",
+                "TotaldeRetenciones": "30",
+                "TotaldeTraslados": "30",
+                "RetencionesLocales": [
+                    {
+                      "ImpLocRetenido": "Imp Local Uno",
+                      "TasadeRetencion": "3",
+                      "Importe": "30"
+                    }
+                ],
+                "TrasladosLocales": [
+                    {
+                      "ImpLocTrasladado": "Imp Local Dos",
+                      "TasadeTraslado": "3",
+                      "Importe": "30"
+                    }
+                ]
+            }
+        }
+        
+        
+}

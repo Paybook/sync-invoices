@@ -229,6 +229,71 @@ En paybook, los datos necesarios deben ser llenados en el campo "Complemento" de
 En el portal del SAT se encuentra una [guia de llenado](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Documents/Complementoscfdi/Guia_comple_pagos.pdf) de los parámetros del complemento, todos las reglas aplican a los campos del JSON que se envia en paybook. Además existe un documento con [dudas frecuentes](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Documents/Complementoscfdi/PregFrec_RP.pdf) acerca de este tipo de CFDI.
 
 
+
+### Complemento Impuestos Locales
+Los parámetros del complemento para impuestos locales se pueden encontrar en el documento de [complemento otros derechos e impuestos en la factura](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/complemento_derechos_impuestos.aspx), en el JSON se coloca en el campo Complemento como se observa en la siguiente estructura:
+
+```
+...
+"Complemento": {
+            "ImpuestosLocales": {
+                "version" : "1.0",
+                "TotaldeRetenciones": "",
+                "TotaldeTraslados": "",
+                "RetencionesLocales": [
+                    {
+                      "ImpLocRetenido": "",
+                      "TasadeRetencion": "",
+                      "Importe": ""
+                    }
+                ],
+                "TrasladosLocales": [
+                    {
+                      "ImpLocTrasladado": "",
+                      "TasadeTraslado": "",
+                      "Importe": ""
+                    }
+                ]
+            }
+}
+```
+
+Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IMPLOCALES.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IMPLOCALES.json)
+
+
+
+### Complemento institucones educativas
+La estructura del [complemento instituciones educativas](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/complemento_iedu.aspx) se coloca en el campo como se observa en la siguiente estructura:
+
+```
+{
+    "Concepto" : {
+            "ClaveProdServ": "01010101",
+            "NoIdentificacion": "UT421510 ",
+            "Cantidad": "1",
+            "ClaveUnidad": "H87",
+            "Unidad": "PZA",
+            "Descripcion": "COLEGIATURA",
+            "ValorUnitario": "50",
+            "Importe": "50",
+            "Descuento": "0",
+            "ComplementoConcepto" : {
+                "instEducativas" : {
+                    "version" : "",
+                    "nombreAlumno" : "",
+                    "CURP" : "",
+                    "nivelEducativo" : ",
+                    "autRVOE" : "",
+                    "rfcPago" : ""
+                }
+            }
+        }
+    }
+```
+
+Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json)
+
+
 ## 5. Información extra
 
 ### Cancelación de facturas con notas de crédito
