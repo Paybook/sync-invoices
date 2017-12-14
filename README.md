@@ -294,7 +294,77 @@ La estructura del [complemento instituciones educativas](http://www.sat.gob.mx/i
 Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json)
 
 
-## 5. Información extra
+## 5. Obtener PDF y enviar email
+
+
+#### Enviar una factura por email
+```
+POST invoicing/mx/invoices
+```
+
+Para enviar el email durante el timbrado de la factura se deben agregar el parámetro "email_data" a la petición de timbrado:
+
+```
+{
+    "api_key" : "{{sync_api_key}}",
+    "id_user" : "{{sync_id_user}}",
+    "id_provider":"iofacturo",
+    "invoice_data": {} //datos json de la factura,
+    "email_data": {
+        "email": "emailcliente@email.com", //(obligatorio)
+        "reply": "miemail@email.com", //(opcional) 
+        "body": "<h1> Hola Mundo</h1>", //(opcional) 
+        "subject": "Email de factura" //(opcional)  
+    }
+
+}
+```
+
+- "email", es el email al que se enviará la factua, es obligatorio
+- "reply", es el email de respuesta que aparecera en el email de la factura, es opconal.
+- "body", es el contenido del email, puede ser texto plano o html, es opcional y si no se agrega, se envia en el contenido el RFC emisor, el receptor, el total de la factura y el UUID
+- "subject", es el asunto del email, es opcional y si no se agrega se envia como "Factura de {{RFC del emisor}}
+
+#### Reenviar una factura por email
+Se usa el endpoint:
+```
+POST invoicing/mx/invoices/{{uuid}}/send
+```
+
+Con los parámetros
+
+```
+{
+    "api_key": la api key de paybook,
+    "id_user": el id del usuario,
+    "email_data": {
+        "email": "emailcliente@email.com", //(obligatorio)
+        "reply": "miemail@email.com", //(opcional) 
+        "body": "<h1> Hola Mundo</h1>", //(opcional) 
+        "subject": "Email de factura" //(opcional)  
+    }
+}
+```
+
+#### Obtener el PDF en la respuesta de timbrado y agregar comentarios
+
+Durante el timbrado es posible obtener el archivo PDF de la factura en la repuesta, este se incluye en el campo "pdf", y se regresa como una cadena codificada en base64, la cual se puede convertir al recibirla en un archivo binario pdf.
+
+Adicionalmente se puede enviar el campo "pdf_comments", para que se agregue información en el campo de comentarios del archivo pdf para el cfdi impreso.
+
+Para obtener el archivo se envia:
+```
+{
+    "api_key": la api key de paybook,
+    "id_user": el id del usuario,
+    "pdf": true,
+    "pdf_comments": "Comentarios para el PDF impreso",
+    "invoice_data":  ...
+}
+```
+
+
+## 6. Información extra
 
 ### Cancelación de facturas con notas de crédito
 
