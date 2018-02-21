@@ -1,0 +1,192 @@
+{
+    "Version": "3.3",
+    "Serie": "A", 
+    "Folio": "23205",
+    "Fecha": "2017-11-12T15:47:02",
+    "FormaPago" : "99",
+    "SubTotal": "1000", //Salario antes de decuento (positivo)
+    "Descuento" : "100", //se puede agregar importe descuento antes de impuestos 
+    "Moneda": "MXN", //Siempre debe ser MXN
+    "Total": "900", //subtotal menos descuento aplicable
+    "TipoDeComprobante": "N", //Siempre debe ser N para nómina
+    "MetodoPago" : "PUE",
+    "LugarExpedicion": "09310", //se debe ingresar codigo postal
+    "Confirmacion" : "ECVH1", //La clave de confirmación (solo valores fuera de rango)
+    "CfdiRelacionados" : { //Por ejemplo en caso de sustitución
+        "TipoRelacion": "04",
+        "CfdiRelacionado": [{
+            "CfdiRelacionado": {
+                "UUID": "5FB2822E-396D-4725-8521-CDC4BDD20CCF"
+            }
+        }]
+    },
+    "Emisor": {
+        "Rfc": "GOYA780416GM0",
+        "Nombre": "Escuela Superior",
+        "RegimenFiscal": "612"
+    },
+    "Receptor": {
+        "Rfc": "FIMA420127R44",
+        "Nombre": "Rafaeli Camposorio Ruízo",
+        "UsoCFDI": "P01"
+    },
+    "Conceptos": {
+        "Concepto" : [{
+            "Concepto" : {
+                "ClaveProdServ": "84111505", //siempre lleva esta clave
+                "Cantidad": "1",
+                "ClaveUnidad": "ACT",   
+                "Descripcion": "Pago de nómina",
+                "ValorUnitario": "0", // TotalPercepciones más TotalOtrosPagos
+                "Importe": "0",  //TotalPercepciones más TotalOtrosPagos
+                "Descuento" : "0", //TotalDeducciones
+            }
+        }]
+    },
+    "Complemento": {
+        "Nomina" : {
+        	"Version" : "1.2",
+        	"TipoNomina" : "O", //O ordinaria / E extraordinaria
+        	"FechaPago" : "2017-05-15", //Feche efectiva del pago
+        	"FechaInicialPago" : "=2017-07-01", //fecha inicial del periodo
+        	"FechaFinalPago" : "2017-04-15", //Fecha final del periodo
+        	"NumDiasPagados" : "15", //Puede ser decimal y minimo 1
+        	"TotalPercepciones" : "15000.00", //TotalSueldos más TotalSeparacionIndemnización más TotalJubilaciónPensiónRetiro
+        	"TotalDeducciones" : "4000.00", //TotalOtrasDeducciones más TotalImpuestosRetenidos, del Nodo Deducciones
+        	"TotalOtrosPagos" : "3000.00", // suma de los importes de "Otros Pagos"
+        	"Emisor" : {
+        		"Curp" : "CABL840215MDFSRS01", //Curp empleador
+        		"RegistroPatronal" : "B5510768108", //Registro patronal IMSS
+        		"RfcPatronOrigen" : "PAL7202161U0", //cuando el pago es através de terceros
+        		"EntidadSNCF" : { //Para entidades estatales, municipales,etc
+	        		"OrigenRecurso" : "IM", //IP propio | IF federales | IM mixto
+	        		"MontoRecursoPropio" : "2000.00" //Solo cuando es recurso mixto
+	        	}
+        	},
+        	
+        	"Receptor" : {
+	        		"Curp" : "AABL840215MDFSRS01", //Curp del empleado
+	        		"NumSeguridadSocial" : "123456789", //NSS empleado
+	        		"FechaInicioRelLaboral" : "2017-01-01", //Fecha en que se inicio a laborar 
+	        		"Antigüedad" : "P10Y8M15D", //Semanas  P20D  | P10Y8M15D años meses diaa | P20D20 días
+	        		"TipoContrato" : "01", //c_TipoContrato
+	        		"Sindicalizado" : "Sí", //Sí | No
+	        		"TipoJornada" : "01", //c_TipoJornada
+	        		"TipoRegimen" : "02", //c_TipoRegimen
+	        		"NumEmpleado" : "120", //Numero interno empleado
+	        		"Departamento" : "Cobranza", //Nombre de departamentos internos
+	        		"Puesto" : "Velador", //Nombre puesto interno
+	        		"RiesgoPuesto" : "1", //c_RiesgoPuesto
+	        		"PeriodicidadPago" : "04", //c_PeriodicidadPago
+	        		"Banco" : "002", //c_Banco
+	        		"CuentaBancaria" : "002215911558451272", 
+	        		"SalarioBaseCotApor" : "490.22",
+	        		"SalarioDiarioIntegrado" : "146.47", 
+	        		"ClaveEntFed" : "", //c_Estado
+	        		"SubContratacion" : [
+	        			{
+		        			"SubContratacion" : {
+			        			"RfcLabora" : "AAA010101AAA", //RFC de la empresa que subcontrato
+			        			"PorcentajeTiempo" : "0.6" //60% 
+		        			}
+	        			},
+	        			{
+		        			"SubContratacion" : {
+			        			"RfcLabora" : "BBB010101AAA", //RFC de la empresa que subcontrato
+			        			"PorcentajeTiempo" : "0.4" //40% 
+		        			}
+	        			}
+	        		]
+        	},
+    	    "Percepciones" : {
+    			"TotalSueldos" : "28000.00", //ImporteGravado+ImporteExento, excepto para 022, 023, 025, 039, 044
+    			"TotalSeparacionIndemnizacion" : "60000.00", //SUma para clave 022, 023, 025
+    			"TotalJubilacionPensionRetiro" : "30000.00", //Suma de 039 y 044
+    			"TotalGravado" : "3180.51", //Total dle importe gravado
+    			"TotalExento" : "150.50", //Total dle importe exento
+    			"Percepcion" : [
+    				{	
+    					"Percepcion" : {
+    						"TipoPercepcion" : "001", //c_TipoPercepción
+    						"Clave" : "00500", //Cve contro l interno 3-15 caracteres
+    						"Concepto" : "Sueldos, Salarios Rayas y Jornales", //	c_TipoPercepcion
+    						"ImporteGravado" : "2598.80",
+    						"ImporteExento" : "1301",
+    						"AccionesOTitulos" : {
+    							"ValorMercado" : "12000.00",
+    							"PrecioAlOtorgarse" : "13000.00"
+    						},
+    						"HorasExtra" : [
+    							{
+        							"HorasExtra" : {
+	        							"Dias" : "2", //numero de días que laboro horas extre
+	        							"TipoHoras" : "01", //c_TipoHoras dobles...triples, etc
+	        							"HorasExtra" : "3", //Debe ser entero
+	        							"ImportePagado" : "300.00", //Importe total por las horas
+	        						}
+        						}
+    						]
+    					}
+    				}
+    			],
+				"JubilacionPensionRetiro" : {
+					"TotalUnaExhibicion" : "20000.00", //monto total una sola exhibicion, MontoDiario y TotalParcialidad no deben existir.
+					"TotalParcialidad" : "15000.00", // En parcialidad, MontoDiario debe existir y por ende el campo TotalUnaExhibicion no debe existir
+					"MontoDiario" : "200.00", //cuando es parcialidades
+					"IngresoAcumulable" : "30000.00",
+					"IngresoNoAcumulable" : "970000.00",
+				},
+				"SeparacionIndemnizacion" : {
+					"TotalPagado" : "36000.00",
+					"NumAñosServicio" : " 11", //entero
+					"UltimoSueldoMensOrd" : "12500.00", 
+					"IngresoAcumulable" : "40000.00", //
+					"IngresoNoAcumulable" : " 1460000.00", //ingreso gravado por indemnización - sueldo mensual ordinario
+				}
+    		},//Fin nodo percepcciones
+    		"Deducciones" : {
+    			"TotalOtrasDeducciones" : "15200.00", //suma deducciones excepto 002	
+    			"TotalImpuestosRetenidos" : "2500.00", //ISR 002
+    			"Deduccion" : [
+    				{
+    					"Deduccion" : {
+    						"TipoDeduccion" : "001", //c_TipoDeduccion
+    						"Clave" : "0031", //clave de control interno
+    						"Concepto" : "Seguridad social", ////c_TipoDeduccion
+    						"Importe" : "200.00"
+    					}
+    				}
+    			],
+
+    		},//Fin nodo deducciones
+    		"OtrosPagos" : [
+    			{
+    				"OtroPago" : {
+    					"TipoOtroPago" : "003", //c_TipoOtroPago.
+    					"Clave" : "0053", //Clave interna otro tipo pago
+    					"Concepto" : "Viáticos (entregados al trabajador)." , //c_TipoOtroPago
+    					"Importe" : "110.00",
+    					"SubsidioAlEmpleo" : {
+    						"SubsidioCausado" : "200.85", //De acuerdo a tabla SAT
+    					},
+    					"CompensacionSaldosAFavor" : {
+    						"SaldoAFavor" : "600.00", 
+    						"Año" : "2016",
+    						"RemanenteSalFav" : "215.00"
+    					}
+
+    				}
+    			}
+    		],
+    		"Incapacidades" : [
+    			{
+    				"Incapacidad" : {
+    					"DiasIncapacidad" : "7",
+    					"TipoIncapacidad" : "03", //c_TipoIncapacidad
+    					"ImporteMonetario" : "1100.00"
+    				}
+    			}
+    		]
+        }
+    }
+}

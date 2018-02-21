@@ -293,6 +293,10 @@ La estructura del [complemento instituciones educativas](http://www.sat.gob.mx/i
 
 Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IEDU.json)
 
+### Complemento de nómina
+
+La estructura del [complemento de nómina](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/complemento_nomina.aspx), en en el archivo [CFDI33_NOMINA12.jsonon](CFDI33_NOMINA12.json), se encuentra la estructura del JSON que se debe enviar para cumplir con los requisitos del recibo. Los campos siguen las reglas del documento oficial del SAT.
+
 
 ## 5. Obtener PDF y enviar email
 
