@@ -3,16 +3,12 @@
     "Serie": "",
     "Folio": "",
     "Fecha": "",
-    "FormaPago": "",
-    "CondicionesDePago": "",
-    "SubTotal": "",
-    "Descuento": "",
+    "SubTotal": "", 
     "Moneda": "",
-    "TipoCambio": "",
     "Total": "",
     "TipoDeComprobante": "",
-    "MetodoPago": "",
     "LugarExpedicion": "",
+    "Confirmacion" : "", 
     "CfdiRelacionados" : {
         "TipoRelacion": "",
         "CfdiRelacionado": [{
@@ -29,9 +25,8 @@
     "Receptor": {
         "Rfc": "",
         "Nombre": "",
-        "ResidenciaFiscal": "",
-        "NumRegIdTrib": "",
-        "UsoCFDI": ""
+        "UsoCFDI": "",
+        "ResidenciaFiscal": "USA" 
     },
     "Conceptos": {
         "Concepto" : [{
@@ -94,7 +89,7 @@
             }
         }]
         
-    },
+    },,
     "Impuestos": {
         "TotalImpuestosRetenidos": "",
         "TotalImpuestosTrasladados": "",
@@ -117,5 +112,88 @@
             }]
         }    
     },
-    "complemento": {}
+    "Complemento": {
+        "ComercioExterior": {
+            "Version" : "1.1",
+            "MotivoTraslado" : "", //Solo si es tipo "T"
+            "TipoOperacion" : "", //c_TipoOperacion
+            "ClaveDePedimento" : "", //c_ClavePedimento
+            "CertificadoOrigen" : "",
+            "NumCertificadoOrigen" : "",
+            "NumeroExportadorConfiable" : "",
+            "Incoterm" : "", //c_INCOTERM
+            "Subdivision" : "0",
+            "Observaciones" : "",
+            "TipoCambioUSD" : "",
+            "TotalUSD" : "",
+            "Emisor" : {
+              "Curp" :"",
+              "Domicilio" : {
+                  "Calle" :"",
+                  "NumeroExterior" : "",
+                  "NumeroInterior" : "",
+                  "Colonia" : "", //c_Colonia
+                  "Localidad" : "", //c_Localidad
+                  "Referencia" : "",
+                  "Municipio" : "", //c_Municipio
+                  "Estado" : "", // c_Estado
+                  "Pais" : "MEX",
+                  "CodigoPostal" : "", //c_CodigoPostal
+                }
+            },            
+            "Propietario" : {
+              "NumRegIdTrib" :"",
+              "ResidenciaFiscal" : "" //c_Pais
+            },
+            "Receptor" : {
+              "NumRegIdTrib" :"",
+              "Domicilio" : {
+                "Calle" :"",
+                "NumeroExterior" : "",
+                "NumeroInterior" : "",
+                "Colonia" : "", //c_Colonia
+                "Localidad" : "", //c_Localidad
+                "Referencia" : "",
+                "Municipio" : "", //c_Municipio
+                "Estado" : "", // c_Estado
+                "Pais" : "",
+                "CodigoPostal" : "", //c_CodigoPostal
+              }
+            },
+            "Destinatario" : {
+              "NumRegIdTrib" :"",
+              "Nombre" : "",
+              "Domicilio" : {
+                "Calle" :"",
+                "NumeroExterior" : "",
+                "NumeroInterior" : "",
+                "Colonia" : "", 
+                "Localidad" : "", 
+                "Referencia" : "",
+                "Municipio" : "", 
+                "Estado" : "",
+                "Pais" : "MEX",
+                "CodigoPostal" : "",
+              }
+            },
+            "Mercancias" : {
+              "Mercancia" : [{
+                "NoIdentificacion" : "",
+                "FraccionArancelaria" : "", //c_FraccionArancelaria
+                "CantidadAduana" : "",
+                "UnidadAduana" : "", //c_UnidadAduana
+                "ValorUnitarioAduana" : "",
+                "ValorDolares" : "",
+                "DescripcionesEspecificas" : {
+                  "Marca" : "",
+                  "Modelo" : "",
+                  "SubModelo" : "",
+                  "NumeroSerie" : "",
+                }
+              }]
+            }
+        }
+    }
+        
+        
 }

@@ -260,6 +260,11 @@ Los parámetros del complemento para impuestos locales se pueden encontrar en el
 
 Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IMPLOCALES.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_IMPLOCALES.json)
 
+### Complemento Impuestos Locales
+Los parámetros del complemento para impuestos locales se pueden encontrar en el documento de [complemento otros derechos e impuestos en la factura](http://omawww.sat.gob.mx/informacion_fiscal/factura_electronica/Documents/Complementoscfdi/GuiaComercioExterior3_3.pdf). La estructura que se debe seguir para enviar como JSON es la siguiente [CFDI_3.3_JSON_ESTRUCTURA_COMPLEMENTO_COMERCIO_EXTERIOR.json](CFDI_3.3_JSON_ESTRUCTURA_COMPLEMENTO_COMERCIO_EXTERIOR.json). En este archivo se puede ver un ejemplo con datos de la estructura: [CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_COMERCIO_EXTERIOR.json](CFDI_3.3_JSON_EJEMPLO_COMPLEMENTO_COMERCIO_EXTERIOR.json)
+
+
+
 
 
 ### Complemento institucones educativas

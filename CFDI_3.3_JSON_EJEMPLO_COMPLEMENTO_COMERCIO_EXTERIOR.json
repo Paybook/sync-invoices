@@ -1,0 +1,206 @@
+{
+    "Version": "3.3",
+    "Serie": "A",
+    "Folio": "9",
+    "Fecha": "2018-10-30T01:01:01",
+    "SubTotal": "2735.00", 
+    "Moneda": "MXN",
+    "Total": "2297.40",
+    "TipoDeComprobante": "I",
+    "MetodoPago" : "PUE",
+    "LugarExpedicion": "09310", 
+    "Emisor": {
+        "Rfc": "BAMM870722L89",
+        "Nombre": "MIGUEL ANGEL BAUTISTA MATEO",
+        "RegimenFiscal": "621"
+    },
+    "Receptor": {
+        "Rfc": "XEXX010101000",
+        "Nombre": "Rodolfo Carranza Ramos",
+        "UsoCFDI": "G03",
+        "ResidenciaFiscal": "USA",
+        "NumRegIdTrib":"123456780"
+    },
+    "Conceptos":  {
+      "Concepto" : [ 
+        {
+            "Concepto" : {
+                "ClaveProdServ": "39101600",
+                "NoIdentificacion": "A-123LFM",
+                "Cantidad": "500",
+                "ClaveUnidad": "C81",
+                "Unidad": "Pieza",
+                "Descripcion": "Bombilla 150W",
+                "ValorUnitario": "1.75",
+                "Importe": "875.00",
+                "Impuestos": {
+                    "Retenciones": {
+                        "Retencion": [{
+                            "Retencion": {
+                                "Base": "875.00",
+                                "Impuesto": "002",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": "0.160000",
+                                "Importe": "140.00"
+                            }
+                        }]
+                    }
+                }
+            }
+        }, 
+        {
+            "Concepto" : {
+                "ClaveProdServ": "39101600",
+                "NoIdentificacion": "A-123JKL",
+                "Cantidad": "1000",
+                "ClaveUnidad": "C81",
+                "Unidad": "Pieza",
+                "Descripcion": "Bombilla 100W",
+                "ValorUnitario": "1.50",
+                "Importe": "1500.00",
+                "Impuestos": {
+                    "Retenciones": {
+                        "Retencion": [{
+                            "Retencion": {
+                                "Base": "1500.00",
+                                "Impuesto": "002",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": "0.160000",
+                                "Importe": "240.00"
+                            }
+                        }]
+                    }
+                }
+            }
+        },
+        {
+            "Concepto" : {
+                "ClaveProdServ": "39101600",
+                "NoIdentificacion": "A-123WHX",
+                "Cantidad": "300",
+                "ClaveUnidad": "C81",
+                "Unidad": "Pieza",
+                "Descripcion": "Bombilla 100W",
+                "ValorUnitario": "1.20",
+                "Importe": "360.00",
+                "Impuestos": {
+                    "Retenciones": {
+                        "Retencion": [{
+                            "Retencion": {
+                                "Base": "360.00",
+                                "Impuesto": "002",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": "0.160000",
+                                "Importe": "57.60"
+                            }
+                        }]
+                    }
+                }
+            }
+        }      
+      ]
+      
+    },
+    "Impuestos": {
+        "TotalImpuestosRetenidos": "437.60",
+        "Retenciones": {
+            "Retencion": [{
+                "Retencion": {
+                    "Impuesto": "002",
+                    "Importe": "437.60"
+                }
+            }]
+        } 
+    },
+    "Complemento": {
+        "ComercioExterior": {
+            "Version" : "1.1",
+            "TipoOperacion" : "2",
+            "ClaveDePedimento" : "A1",
+            "CertificadoOrigen" : "0",
+            "Incoterm" : "FOB",
+            "Subdivision" : "0",
+            "Observaciones" : "Importacion en Mayo",
+            "TipoCambioUSD" : "18.845100",
+            "TotalUSD" : "4917.00",
+            "Emisor" : {
+              "Curp" :"MAJS721028MDFMTR04",
+              "Domicilio" : {
+                "Calle" :"Hidalgo",
+                "NumeroExterior" : "1000",
+                "Colonia" : "0209", 
+                "Municipio" : "014",
+                "Estado" : "QUE",
+                "Pais" : "MEX",
+                "CodigoPostal" : "76224"
+              }
+            },            
+            "Receptor" : {
+              "Domicilio" : {
+                "Calle" :"Avenue Sahara",
+                "NumeroExterior" : "73",
+                "NumeroInterior" : "BIG DESERT",
+                "Estado" : "TX", 
+                "Pais" : "USA",
+                "CodigoPostal" : "78652"
+              }
+            },
+            "Destinatario" : {
+              "NumRegIdTrib" :"",
+              "Nombre" : "",
+              "Domicilio" : {
+                "Calle" :"",
+                "NumeroExterior" : "",
+                "NumeroInterior" : "",
+                "Colonia" : "", 
+                "Localidad" : "", 
+                "Referencia" : "",
+                "Municipio" : "", 
+                "Estado" : "",
+                "Pais" : "MEX",
+                "CodigoPostal" : ""
+              }
+            },
+            "Mercancias" : {
+              "Mercancia" : [{
+                "NoIdentificacion" : "A-123LFM",
+                "FraccionArancelaria" : "94059102", 
+                "CantidadAduana" : "1200",
+                "UnidadAduana" : "01",
+                "ValorUnitarioAduana" : "1.75",
+                "ValorDolares" : "2100",
+                "DescripcionesEspecificas" : {
+                  "Marca" : "ALPHA",
+                  "Modelo" : "C20",
+                  "SubModelo" : "212",
+                  "NumeroSerie" : "0111X"
+                }
+              },
+              {
+                "NoIdentificacion" : "A-123JKL",
+                "FraccionArancelaria" : "94059102", 
+                "CantidadAduana" : "958",
+                "UnidadAduana" : "01",
+                "ValorUnitarioAduana" : "1.50",
+                "ValorDolares" : "1437.00",
+                "DescripcionesEspecificas" : {
+                  "Marca" : "ALPHA",
+                  "Modelo" : "C21",
+                  "SubModelo" : "211",
+                  "NumeroSerie" : "0112X"
+                }
+              },
+              {
+                "NoIdentificacion" : "A-123WHX",
+                "FraccionArancelaria" : "94059102", 
+                "CantidadAduana" : "1150",
+                "UnidadAduana" : "01",
+                "ValorUnitarioAduana" : "1.20",
+                "ValorDolares" : "1380.00"
+              }]
+            }
+        }
+    }
+        
+        
+}
