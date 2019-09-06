@@ -406,3 +406,14 @@ Para generar la nota es necesario:
 - En Forma de pago se debe elegir la misma del original
 - Clave producto  o serivio debe ser "84111506"
 - Y la clave de unidad "ACT"
+
+## 7. Addenda
+Las addendas que se agreguen en el XML se timbran directamente como se encuentran, es por eso que es importante que se verifique que se encuentren bien construidas.
+
+Para el timbrado de JSON, se soportan las addendas pasandolas directamente el XML en la propiedad "Addenda", ejemploe:
+
+```
+...
+"Addenda" : "<Addenda><mabeFactura xmlns:mabe=\"http://recepcionfe.mabempresa.com/cfd/addenda/v1\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://recepcionfe.mabempresa.com/cfd/addenda/v1 http://recepcionfe.mabempresa.com/cfd/addenda/v1/mabev1.xsd\" version=\"1.0\" tipoDocumento=\"FACTURA\" folio=\"IA1222\" fecha=\"2011-09-20\"><mabeMoneda tipoMoneda=\"MXN\" /> <mabeProveedor codigo=\"PPIN1120\" /> <mabeEntrega plantaEntrega=\"590\" /> <mabeDetalles><mabeDetalle noLineaArticulo=\"1\" codigoArticulo=\"N40254\" descripcion=\"ALUM.BARRA CUADRADA 6061T6 25.4 MM.\" unidad=\"KG\" cantidad=\"1.120\" precioSinIva=\"73.60\" importeSinIva=\"82.43\" /> <mabeDetalle noLineaArticulo=\"2\" codigoArticulo=\"N80091\" descripcion=\"ALUMINIO SOLERA 6061 T-6 9.5X101.6MM\" unidad=\"KG\" cantidad=\"1.900\" precioSinIva=\"73.60\" importeSinIva=\"139.84\" /> <mabeDetalle noLineaArticulo=\"3\" codigoArticulo=\"N80504\" descripcion=\"ALUMINIO SOLERA 6061 T-6 12.7X50.8MM\" unidad=\"KG\" cantidad=\"3.600\" precioSinIva=\"73.60\" importeSinIva=\"264.96\" /> </mabeDetalles><mabeSubtotal importe=\"487.23\" /> </mabeFactura></Addenda>"
+...
+```
