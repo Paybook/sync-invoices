@@ -303,6 +303,23 @@ Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_J
 La estructura del [complemento de nómina](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/complemento_nomina.aspx), en en el archivo [CFDI33_NOMINA12.jsonon](CFDI33_NOMINA12.json), se encuentra la estructura del JSON que se debe enviar para cumplir con los requisitos del recibo. Los campos siguen las reglas del documento oficial del SAT.
 
 
+### Complemento donatarias
+
+La estructura del [complemento de donatarias](https://www.sat.gob.mx/consulta/53870/genera-tus-facturas-electronicas-con-el-complemento-para-donatarias). Para incluirlo en el JSON se agrega en el nodo Complemento con la donataria con la respectiva información:
+```
+{
+    "Complemento" : {
+            "Donatarias": {
+                "version" : "1.1",
+                "noAutorizacion" : "325-SAT-28-I-(21)-0000",
+                "fechaAutorizacion" : "2019-01-23",
+                "leyenda" : "Este comprobante ampara un donativo, el cual será destinado por la donataria a los fines propios de su objeto social."
+
+            }
+    }
+```
+
+
 ## 5. Obtener PDF y enviar email
 
 
