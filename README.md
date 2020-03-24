@@ -303,6 +303,30 @@ Puede ver un ejemplo de JSON valido con el complemento en el archivo [CFDI_3.3_J
 La estructura del [complemento de nómina](http://www.sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/complemento_nomina.aspx), en en el archivo [CFDI33_NOMINA12.jsonon](CFDI33_NOMINA12.json), se encuentra la estructura del JSON que se debe enviar para cumplir con los requisitos del recibo. Los campos siguen las reglas del documento oficial del SAT.
 
 
+### Leyendas fiscales
+
+La estructura del [complemento de donatarias](https://www.sat.gob.mx/consulta/54115/facturas-electronicas-con-leyendas-fiscales). Para incluirlo en el JSON se agrega en el nodo Complemento con las leyendas que se quieran agregar:
+
+Ejemplo de JSON de factura [CFDI_3.3_JSON_EJEMPLO_LEYENDA_FISCALES.json](CFDI_3.3_JSON_EJEMPLO_LEYENDA_FISCALES.json).
+
+```
+{
+    "Complemento": {
+          "LeyendasFiscales" : {
+            "Leyenda" : [
+              {"Leyenda": {
+                  "disposicionFiscal" : "ISR",
+                  "norma" : "005",
+                  "textoLeyenda" : "Efectos fiscales al pago"
+                }
+              }
+            ]
+          }
+        }
+```
+
+
+
 ### Complemento donatarias
 
 La estructura del [complemento de donatarias](https://www.sat.gob.mx/consulta/53870/genera-tus-facturas-electronicas-con-el-complemento-para-donatarias). Para incluirlo en el JSON se agrega en el nodo Complemento con la donataria con la respectiva información:
