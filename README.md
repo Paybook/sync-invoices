@@ -177,6 +177,23 @@ PUT invoicing/mx/invoices/{{uuid}}/cancel
 
 La factura cancelada seguirá almacenada en el sistema pero con el estado de cancelación. En la respuesta exitosa de cancelación contiene el parámetro 'success' igual a 'true', además del acuse de cancelación en formato XML, el cual proporcionan los proveedores de servicio de timbrado.
 
+Nota: Pare cancelación de CFDI de retenciones no se regresa acuse de cancelación, debe usarse el endpoint para recuperaro
+
+
+Obtener el acuse de cancelación de CFDI:
+```
+GET invoicing/mx/invoices/{{uuid}}/cancel/receipt
+```
+
+La respuesta tiene el formato
+```{
+    "error": false,
+    "uuid": "34B1E7-D06F-442E-AB8B-885F534B1CBD",
+        "cancel_receipt": "<Acuse xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" Fecha=\"2020-06-22T20:03:44.6142546\" RfcEmisor=\"JORC83082579A\" WorkProcessId=\"4894e44e-bc7f-4478-9f8f-a49cdccdd5ba\" xmlns=\"http://www.sat.gob.mx/esquemas/retencionpago/1\"><Folios><UUID>3488B1E7-D06F-442E-AB8B-885F534B1CBD</UUID><EstatusUUID>1201</EstatusUUID></Folios><Signature Id=\"SelloSAT\" xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#hmac-sha512\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/TR/1999/REC-xpath-19991116\"><XPath>not(ancestor-or-self::*[local-name()='Signature'])</XPath></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha512\" /><DigestValue>1EoNlWheIJnz+oWVBqMQD8nF9X5hbhZFEXthkfCAaleB9ADPiDm0TT+QybWmeXMOutXXKpLCtlxVHXc6y1mEsg==</DigestValue></Reference></SignedInfo><SignatureValue>ju7hEqmiLg7sxjp/JBWQmMis9bIMbYwPeCsRgBB8PD/bDOKi9p9I6+RZ0+VOAFUP7uOWV5J8BAMkX2XW+apfXw==</SignatureValue><KeyInfo><KeyName>00001088888800000031</KeyName><KeyValue><RSAKeyValue><Modulus>ujwIJaMKWWmawqDpHx/OS10pXzEh2SQhY02y64v9Q0+I+0dGlIrjFJeGrsHqAT3JoYnh38Dxwta98t/7++dh2hOgiZEwRignWRIlOgM1MefBHEyY+hi4vHpZgPKq/hJVfHf9nOvlb5UgIHMTCEwrDp3qk9O5XtTEycnWwiqleG0c1J9sfbRxC0gYBHsNTH85OEtSXYMkiWNYNnFbIc7B0sgp2y18jUxUCNFBMMTV0tz2sxRF+V4hblaPjI75RWmvs9E4lD7MVmW3z7LIlSajuSL8eOqoerSkQhPBABIeQenEPQwRTt3ej3XpVaBsOmagIPZZI3RvOVh+5mcXDE5txQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Acuse>"
+    }
+```
+
+
 ## 3. Proveedores facturación PACs
 
 ### Listado de proveedores de facturación.
